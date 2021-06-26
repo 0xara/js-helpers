@@ -1,0 +1,18 @@
+export { isWindow } from './isWindow.js';
+export { toType } from './toType.js';
+import '../array/isArrayLike.js';
+export { each } from './each.js';
+import '../array/isArray.js';
+export { deepEquals } from './equals.js';
+export { isBoolean } from './isBoolean.js';
+export { isNumeric } from './isNumeric.js';
+export { isFloat } from './isFloat.js';
+export { isFunction } from './isFunction.js';
+export { isInteger } from './isInteger.js';
+export { isJson } from './isJson.js';
+export { isMobile } from './isMobile.js';
+export { isString } from './isString.js';
+export { isFile } from './isFile.js';
+export { isFileList } from './isFileList.js';
+export { isBlob } from './isBlob.js';
+import './isIE.js';

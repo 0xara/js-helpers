@@ -1,0 +1,60 @@
+{
+  "name": "js-helpers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/js-helpers.umd.js",
+  "module": "dist/js-helpers.esm.js",
+  "unpkg": "dist/js-helpers.min.js",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd & npm run build:split",
+    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/js-helpers.umd.js",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/js-helpers.esm.js",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/js-helpers.min.js",
+    "build:split": "cross-env NODE_ENV=production rollup --config build/rollupFiles.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arasharg/js-helpers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arasharg/js-helpers/issues"
+  },
+  "homepage": "https://github.com/arasharg/js-helpers#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.13.0",
+    "jest": "^23.0.0",
+    "minimist": "^1.2.0",
+    "napa": "^3.0.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-multi-entry": "^2.1.0",
+    "rollup-plugin-multi-input": "^1.0.2",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "raf": "^3.4.1",
+    "element-closest": "^3.0.1"
+  }
+}
